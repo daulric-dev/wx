@@ -1,0 +1,88 @@
+{
+  "name": "wx",
+  "description": "Service-aware git workflow helper for multi-service repositories",
+  "commands": [
+    {
+      "name": "status",
+      "description": "Show working-tree changes grouped by service"
+    },
+    {
+      "name": "service",
+      "args": "[list|add|remove]",
+      "description": "List or manage registered services in wx.json"
+    },
+    {
+      "name": "affected",
+      "description": "Print services touched relative to a base branch",
+      "options": [
+        { "flag": "--base <branch>", "description": "Base branch to diff against (default: main)" }
+      ]
+    },
+    {
+      "name": "commit",
+      "args": "[service]",
+      "description": "Create a scoped conventional commit, interactively",
+      "options": [
+        { "flag": "-m <message>", "description": "Commit message" }
+      ]
+    },
+    {
+      "name": "branch",
+      "args": "[name]",
+      "description": "Create or switch branches"
+    },
+    {
+      "name": "diff",
+      "args": "[service]",
+      "description": "Show a diff, optionally scoped to a service"
+    },
+    {
+      "name": "run",
+      "args": "<service> <script>",
+      "description": "Run a bun script inside a service's directory"
+    },
+    {
+      "name": "checkout",
+      "args": "[branch]",
+      "description": "Checkout a branch (alias: co)"
+    },
+    {
+      "name": "sync",
+      "description": "Fetch and fast-forward the current branch"
+    },
+    {
+      "name": "rebase",
+      "description": "Rebase the current branch onto a base branch",
+      "options": [
+        { "flag": "--onto <branch>", "description": "Branch to rebase onto" }
+      ]
+    },
+    {
+      "name": "reset",
+      "description": "Reset working-tree changes interactively"
+    },
+    {
+      "name": "push",
+      "description": "Push the current branch to origin",
+      "options": [
+        { "flag": "--force", "description": "Force-push with lease" }
+      ]
+    },
+    {
+      "name": "pr",
+      "description": "Open or create a pull/merge request for the current branch"
+    },
+    {
+      "name": "help",
+      "description": "Show this help"
+    }
+  ],
+  "examples": [
+    "wx status",
+    "wx service add",
+    "wx commit api -m \"fix: handle null user\"",
+    "wx affected --base main",
+    "wx run api dev",
+    "wx pr"
+  ]
+}

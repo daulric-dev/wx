@@ -1,0 +1,38 @@
+{
+  "name": "@daulric/wx",
+  "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Service-aware git workflow for managing multiple projects in a single repo",
+  "type": "module",
+  "module": "src/index.ts",
+  "bin": {
+    "wx": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "keywords": [
+    "git",
+    "cli",
+    "monorepo",
+    "workflow",
+    "bun"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
