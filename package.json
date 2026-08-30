@@ -4,7 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "Service-aware git workflow for managing multiple projects in a single repo",
+  "description": "Service-aware git workflow for managing multiple projects in a single repo.",
   "type": "module",
   "module": "src/index.ts",
   "bin": {
