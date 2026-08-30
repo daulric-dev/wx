@@ -130,7 +130,7 @@ export async function serviceCmd(positionals: string[]) {
     }
     config.services = config.services.filter((s) => normalizedEntry(s).name !== name);
     writeMrConfig(config);
-    console.log(`\x1b[32mRemoved\x1b[0m \x1b[36m${name}\x1b[0m from _mr.json`);
+    console.log(`\x1b[32mRemoved\x1b[0m \x1b[36m${name}\x1b[0m from wx.json`);
     return;
   }
 
@@ -169,12 +169,12 @@ export async function serviceCmd(positionals: string[]) {
     }
 
     console.error(`Unknown action: service root ${action}`);
-    console.error("Usage: gb service root [show|set|clear]");
+    console.error("Usage: wx service root [show|set|clear]");
     process.exit(1);
   }
 
   console.error(`Unknown subcommand: service ${sub}`);
-  console.error("Usage: gb service [list|add|edit|remove|root]");
+  console.error("Usage: wx service [list|add|edit|remove|root]");
   process.exit(1);
 }
 

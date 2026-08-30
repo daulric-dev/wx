@@ -64,11 +64,14 @@ export function groupByService(files: FileOnService[] ): Record<string, FileOnSe
 
 export function parseStatusOutput(output: string) : FileOnService[] {
     if (!output) return [];
-    return output.split("\n").map((line) => {
-        const status = line.slice(0, 2).trim();
-        const path = line.slice(3);
-        return { status, path }
-    })
+    return output
+        .split("\n")
+        .filter((line) => line.trim().length > 0)
+        .map((line) => {
+            const status = line.slice(0, 2).trim();
+            const path = line.slice(3);
+            return { status, path }
+        })
 };
 
 export function slugify(text: string) : string {

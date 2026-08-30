@@ -10,7 +10,7 @@ conventional commits, and wraps common branch/sync/rebase/PR flows.
 Requires [Bun](https://bun.com).
 
 ```bash
-bun add -g wx
+bun add -g @daulric/wx
 ```
 
 ## Configure

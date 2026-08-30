@@ -8,7 +8,7 @@
     },
     {
       "name": "service",
-      "args": "[list|add|remove]",
+      "args": "[list|add|edit|remove|root]",
       "description": "List or manage registered services in wx.json"
     },
     {
